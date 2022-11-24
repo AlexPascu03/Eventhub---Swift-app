@@ -13,6 +13,23 @@
 		9C012975292CD8BF00E1C82E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C012973292CD8BF00E1C82E /* Main.storyboard */; };
 		9C012977292CD8C000E1C82E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C012976292CD8C000E1C82E /* Assets.xcassets */; };
 		9C01297A292CD8C000E1C82E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C012978292CD8C000E1C82E /* LaunchScreen.storyboard */; };
+		9C012983292CDA6500E1C82E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C012982292CDA6500E1C82E /* AppCoordinator.swift */; };
+		9C012985292CDFCB00E1C82E /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C012984292CDFCB00E1C82E /* SignInCoordinator.swift */; };
+		9C012987292CE1ED00E1C82E /* SignInRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C012986292CE1ED00E1C82E /* SignInRepository.swift */; };
+		9C012989292CE28400E1C82E /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C012988292CE28400E1C82E /* SignInViewModel.swift */; };
+		9C01298B292CE2B700E1C82E /* SignInNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C01298A292CE2B700E1C82E /* SignInNavigation.swift */; };
+		9C01298D292CEA8A00E1C82E /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C01298C292CEA8A00E1C82E /* SignInView.swift */; };
+		9C01299E292CF79A00E1C82E /* CustomInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C012995292CF49200E1C82E /* CustomInput.swift */; };
+		9C01299F292CF7F300E1C82E /* CustomInputPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C012997292CF49200E1C82E /* CustomInputPass.swift */; };
+		9C0129A0292CF89000E1C82E /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C01299D292CF4C400E1C82E /* Color.swift */; };
+		9C0129A1292CFD5F00E1C82E /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C012992292CF49200E1C82E /* CustomButton.swift */; };
+		9C5DEEE9292E559A005A16C1 /* ErrorMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5DEEE8292E559A005A16C1 /* ErrorMessages.swift */; };
+		9CF67094292D108000ED1473 /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF67093292D108000ED1473 /* RegisterCoordinator.swift */; };
+		9CF67096292D108E00ED1473 /* RegisterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF67095292D108E00ED1473 /* RegisterRepository.swift */; };
+		9CF67098292D109A00ED1473 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF67097292D109900ED1473 /* RegisterViewModel.swift */; };
+		9CF6709A292D10B800ED1473 /* RegisterNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF67099292D10B800ED1473 /* RegisterNavigation.swift */; };
+		9CF6709C292D10CD00ED1473 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF6709B292D10CD00ED1473 /* RegisterView.swift */; };
+		9CF670A0292E357500ED1473 /* ErrorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF6709F292E357500ED1473 /* ErrorLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +41,23 @@
 		9C012976292CD8C000E1C82E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C012979292CD8C000E1C82E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C01297B292CD8C000E1C82E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C012982292CDA6500E1C82E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		9C012984292CDFCB00E1C82E /* SignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
+		9C012986292CE1ED00E1C82E /* SignInRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRepository.swift; sourceTree = "<group>"; };
+		9C012988292CE28400E1C82E /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		9C01298A292CE2B700E1C82E /* SignInNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInNavigation.swift; sourceTree = "<group>"; };
+		9C01298C292CEA8A00E1C82E /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		9C012992292CF49200E1C82E /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		9C012995292CF49200E1C82E /* CustomInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInput.swift; sourceTree = "<group>"; };
+		9C012997292CF49200E1C82E /* CustomInputPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputPass.swift; sourceTree = "<group>"; };
+		9C01299D292CF4C400E1C82E /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		9C5DEEE8292E559A005A16C1 /* ErrorMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessages.swift; sourceTree = "<group>"; };
+		9CF67093292D108000ED1473 /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
+		9CF67095292D108E00ED1473 /* RegisterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRepository.swift; sourceTree = "<group>"; };
+		9CF67097292D109900ED1473 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		9CF67099292D10B800ED1473 /* RegisterNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNavigation.swift; sourceTree = "<group>"; };
+		9CF6709B292D10CD00ED1473 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		9CF6709F292E357500ED1473 /* ErrorLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +90,11 @@
 		9C01296C292CD8BF00E1C82E /* EventHub */ = {
 			isa = PBXGroup;
 			children = (
+				9C01299C292CF4C400E1C82E /* Utils */,
+				9C012990292CF49200E1C82E /* Components */,
+				9C012981292CDA3D00E1C82E /* SignIn */,
+				9CF67092292D103200ED1473 /* Register */,
+				9C012982292CDA6500E1C82E /* AppCoordinator.swift */,
 				9C01296D292CD8BF00E1C82E /* AppDelegate.swift */,
 				9C01296F292CD8BF00E1C82E /* SceneDelegate.swift */,
 				9C012971292CD8BF00E1C82E /* ViewController.swift */,
@@ -65,6 +104,66 @@
 				9C01297B292CD8C000E1C82E /* Info.plist */,
 			);
 			path = EventHub;
+			sourceTree = "<group>";
+		};
+		9C012981292CDA3D00E1C82E /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				9C012984292CDFCB00E1C82E /* SignInCoordinator.swift */,
+				9C012986292CE1ED00E1C82E /* SignInRepository.swift */,
+				9C012988292CE28400E1C82E /* SignInViewModel.swift */,
+				9C01298A292CE2B700E1C82E /* SignInNavigation.swift */,
+				9C01298C292CEA8A00E1C82E /* SignInView.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		9C012990292CF49200E1C82E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9C012991292CF49200E1C82E /* Buttons */,
+				9C012993292CF49200E1C82E /* Inputs */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		9C012991292CF49200E1C82E /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				9C012992292CF49200E1C82E /* CustomButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		9C012993292CF49200E1C82E /* Inputs */ = {
+			isa = PBXGroup;
+			children = (
+				9C012995292CF49200E1C82E /* CustomInput.swift */,
+				9CF6709F292E357500ED1473 /* ErrorLabel.swift */,
+				9C012997292CF49200E1C82E /* CustomInputPass.swift */,
+			);
+			path = Inputs;
+			sourceTree = "<group>";
+		};
+		9C01299C292CF4C400E1C82E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9C01299D292CF4C400E1C82E /* Color.swift */,
+				9C5DEEE8292E559A005A16C1 /* ErrorMessages.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		9CF67092292D103200ED1473 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				9CF67093292D108000ED1473 /* RegisterCoordinator.swift */,
+				9CF67095292D108E00ED1473 /* RegisterRepository.swift */,
+				9CF67097292D109900ED1473 /* RegisterViewModel.swift */,
+				9CF67099292D10B800ED1473 /* RegisterNavigation.swift */,
+				9CF6709B292D10CD00ED1473 /* RegisterView.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +237,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C0129A1292CFD5F00E1C82E /* CustomButton.swift in Sources */,
+				9C01298D292CEA8A00E1C82E /* SignInView.swift in Sources */,
+				9C012983292CDA6500E1C82E /* AppCoordinator.swift in Sources */,
+				9CF67098292D109A00ED1473 /* RegisterViewModel.swift in Sources */,
+				9CF67094292D108000ED1473 /* RegisterCoordinator.swift in Sources */,
+				9C012989292CE28400E1C82E /* SignInViewModel.swift in Sources */,
 				9C012972292CD8BF00E1C82E /* ViewController.swift in Sources */,
+				9C01299F292CF7F300E1C82E /* CustomInputPass.swift in Sources */,
+				9C5DEEE9292E559A005A16C1 /* ErrorMessages.swift in Sources */,
+				9C0129A0292CF89000E1C82E /* Color.swift in Sources */,
+				9CF6709C292D10CD00ED1473 /* RegisterView.swift in Sources */,
+				9C01298B292CE2B700E1C82E /* SignInNavigation.swift in Sources */,
 				9C01296E292CD8BF00E1C82E /* AppDelegate.swift in Sources */,
+				9CF6709A292D10B800ED1473 /* RegisterNavigation.swift in Sources */,
 				9C012970292CD8BF00E1C82E /* SceneDelegate.swift in Sources */,
+				9CF670A0292E357500ED1473 /* ErrorLabel.swift in Sources */,
+				9C012985292CDFCB00E1C82E /* SignInCoordinator.swift in Sources */,
+				9CF67096292D108E00ED1473 /* RegisterRepository.swift in Sources */,
+				9C012987292CE1ED00E1C82E /* SignInRepository.swift in Sources */,
+				9C01299E292CF79A00E1C82E /* CustomInput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
