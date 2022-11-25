@@ -9,6 +9,7 @@ import UIKit
 
 final class RegisterCoordinator {
     let navController: UINavigationController
+    var signInCoordinator: SignInCoordinator?
     
     init(navController: UINavigationController) {
         self.navController = navController
@@ -17,17 +18,19 @@ final class RegisterCoordinator {
     func start() {
         let repository = RegisterRepository()
         var navigation = RegisterNavigation()
-        
-        navigation.onClose = { [weak self] in
+        navigation.onGoToSignIn = { [weak self] in
             self?.navController.popViewController(animated: true)
-            print("Should Close Register")
         }
-        
         let viewModel = RegisterViewModel(repository: repository, navigation: navigation)
         let view = RegisterView(viewModel: viewModel)
         let viewController = UIHostingController(rootView: view)
-        
-        
+        navController.isNavigationBarHidden = true
         navController.pushViewController(viewController, animated: true)
+    }
+    
+    func onGoToSignIn() {
+        signInCoordinator = SignInCoordinator(navController: navController)
+        signInCoordinator?.start()
+
     }
 }
