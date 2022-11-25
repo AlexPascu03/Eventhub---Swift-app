@@ -10,7 +10,9 @@ import UIKit
 final class AppCoordinator{
     let window: UIWindow
     let navController: UINavigationController
+    var signInCoordinator: SignInCoordinator?
     var registerCoordinator: RegisterCoordinator?
+
     
     
     init(scene: UIWindowScene) {
@@ -25,9 +27,9 @@ final class AppCoordinator{
         
         if isLogged{
             print("is logged")
-        }else{
-            registerCoordinator = RegisterCoordinator(navController: navController)
-            registerCoordinator?.start()
+        } else {
+            signInCoordinator = SignInCoordinator(navController: navController)
+            signInCoordinator?.start()
         }
     }
 }
