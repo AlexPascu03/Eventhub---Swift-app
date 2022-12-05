@@ -8,11 +8,9 @@
 import Foundation
 
 protocol RegisterNavigationProtocol {
-    var onClose: (() -> Void)? { get set}
-    var onGoToSignUp: (() -> Void)? { get set}
+    var onGoToSignIn: (() -> Void)? { get set}
 }
 
 struct RegisterNavigation: RegisterNavigationProtocol {
-    var onClose: (() -> Void)?
-    var onGoToSignUp: (() -> Void)?
+    var onGoToSignIn: (() -> Void)?
 }

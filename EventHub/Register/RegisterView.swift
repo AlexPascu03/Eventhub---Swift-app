@@ -17,7 +17,7 @@ struct RegisterView<ViewModel: RegisterViewModelProtocol>: View {
                     .fontWeight(.bold)
                 
                 CustomInput(placeholder: "Numele si Prenumele", value: $viewModel.name, icon:"userImage", prompt: ErrorMessages.name.message, hasError: $viewModel.hasNameError)
-                    
+                
                 
                 CustomInput(placeholder: "Adresa de e-mail", value: $viewModel.email, icon:"Mail", prompt: ErrorMessages.email.message, hasError: $viewModel.hasEmailError)
                 
@@ -37,9 +37,9 @@ struct RegisterView<ViewModel: RegisterViewModelProtocol>: View {
             Spacer()
             HStack{
                 Text("Ai deja cont?")
-                    Text("Autentifica-te")
-                        .foregroundColor(.blue)
-                        .fontWeight(.bold)
+                Button("Conecteaza-te!") {
+                    viewModel.goToSignIn()
+                }
             }
             
         }.padding()

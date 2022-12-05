@@ -8,11 +8,7 @@
 import Foundation
 
 protocol RegisterRepositoryProtocol {
-    func getUser() -> String
 }
 
 final class RegisterRepository: RegisterRepositoryProtocol {
-    func getUser() -> String {
-        "Alex"
-    }
 }
