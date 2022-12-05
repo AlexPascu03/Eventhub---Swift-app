@@ -10,8 +10,6 @@ import Firebase
 import FirebaseFirestore
 
 protocol RegisterRepositoryProtocol {
-    func createUser(fName: String, password: String, email: String, onResponse: @escaping(Result<Void, Error>) -> Void) -> Void
-}
 
 final class RegisterRepository: RegisterRepositoryProtocol {
     
