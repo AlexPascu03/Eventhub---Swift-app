@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import Firebase
 
 final class AppCoordinator{
     let window: UIWindow
     let navController: UINavigationController
     var signInCoordinator: SignInCoordinator?
-    var registerCoordinator: RegisterCoordinator?
+    var createEventCoordinator: CreateEventCoordinator?
+    var mainPageCoordinator: MainPageCoordinator?
 
     
     
@@ -23,13 +25,14 @@ final class AppCoordinator{
     }
     
     func start(){
-        let isLogged = false
+        let isLogged = true
         
         if isLogged{
-            print("is logged")
+            mainPageCoordinator = MainPageCoordinator(navController: navController)
+            mainPageCoordinator?.start()
         } else {
-            signInCoordinator = SignInCoordinator(navController: navController)
-            signInCoordinator?.start()
+            createEventCoordinator = CreateEventCoordinator(navController: navController)
+            createEventCoordinator?.start()
         }
     }
 }

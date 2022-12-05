@@ -36,11 +36,13 @@ struct CustomInputPass: View {
                         .cornerRadius(16)
                         .padding(.leading,10)
                     Image(icon)
+                        .renderingMode(.template)
+                        .foregroundColor(hasError ? Color.red : Color.gray)
                         .padding(.trailing,24)
                         .frame(width:20 ,height: 16 )
                     
-                    
                 }.overlay(RoundedRectangle(cornerRadius: 16).stroke(Color.gray))
+                    .background(RoundedRectangle(cornerRadius: 15).fill(hasError ? Color.ErrRed : Color.white))
                 HStack{
                     
                     TextField(placeholder, text : $value) { focused in
@@ -58,15 +60,15 @@ struct CustomInputPass: View {
                     .padding(.leading,10)
                     .foregroundColor(.clear)
                     
-                    
                     Image(icon)
+                        .renderingMode(.template)
+                        .foregroundColor(hasError ? Color.red : Color.gray)
                         .padding(.trailing,24)
                         .frame(width:20 ,height: 16 )
                     
                 }.overlay(RoundedRectangle(cornerRadius: 16).stroke(isFocused ? Color.EHPurple : Color.gray, lineWidth: isFocused ? 2 : 1 ))
                     .autocorrectionDisabled()
                     .overlay(RoundedRectangle(cornerRadius: 16).stroke(hasError ? Color.red : Color.gray, lineWidth: hasError ? 2 : 1 ))
-                
             }
             if hasError{
                 ErrorLabel(prompt: prompt)
@@ -77,6 +79,6 @@ struct CustomInputPass: View {
 
 struct CustomInputPass_Previews: PreviewProvider {
     static var previews: some View {
-        CustomInputPass(placeholder: "Password", value: .constant(""), icon:"", prompt:"error", hasError: .constant(true))
+        CustomInputPass(placeholder: "Password", value: .constant("ss"), icon:"passwordKey", prompt:"error", hasError: .constant(true))
     }
 }
