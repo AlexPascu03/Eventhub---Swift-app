@@ -15,14 +15,14 @@ struct ErrorLabel: View {
     }
     
     var body: some View {
-        HStack{
+        HStack(spacing: 5){
             Image("Ellipse 34")
                 .overlay(Image("!"))
             Text(prompt)
                 .foregroundColor(.red)
                 .font(.system(size:13))
         }
-        }
+    }
 }
 
 struct ErrorLabel_Previews: PreviewProvider {

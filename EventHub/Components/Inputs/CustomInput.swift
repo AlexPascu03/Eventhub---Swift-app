@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct CustomInput: View {
     
@@ -16,7 +17,6 @@ struct CustomInput: View {
     @Binding var hasError: Bool
     @State var isFocused: Bool = false
     @State private var animationAmount = 0
-
     
     init(placeholder: String , value: Binding<String>, icon: String, prompt: String, hasError: Binding<Bool>){
         self.placeholder = placeholder
@@ -25,8 +25,6 @@ struct CustomInput: View {
         self.prompt = prompt
         self._hasError = hasError
     }
-    
-    
     
     var body: some View{
         
@@ -38,9 +36,7 @@ struct CustomInput: View {
                         .offset(y: value.isEmpty ? 0 : -10)
                         .font(.system(size:13))
                         .foregroundColor(hasError ? Color.red : Color.gray)
-                        //.scaleEffect(value.isEmpty ? 1 : 0.8, anchor: .leading)
                         .animation(.spring(), value: animationAmount)
-
                 }
                 
                 TextField(placeholder, text : $value) { focused in
@@ -62,22 +58,24 @@ struct CustomInput: View {
                 .foregroundColor(hasError ? Color.red : Color(.placeholderText))
             }.padding([.leading], 10)
             
-            
             Image(icon)
+                .renderingMode(.template)
+                .foregroundColor(hasError ? Color.red : Color.gray)
                 .padding(.trailing,24)
                 .frame(width:20 ,height: 16 )
             
-            
-        }.overlay(RoundedRectangle(cornerRadius: 16).stroke(isFocused ? Color.EHPurple : Color.gray, lineWidth: isFocused ? 2 : 1 ))
-            .autocorrectionDisabled()
-        .overlay(RoundedRectangle(cornerRadius: 16).stroke(hasError ? Color.red : Color.gray, lineWidth: hasError ? 2 : 1 ))
+        }.overlay(RoundedRectangle(cornerRadius: 16)
+            .stroke(isFocused ? Color.EHPurple : Color.gray, lineWidth: isFocused ? 2 : 1 ))
+        .autocorrectionDisabled()
+        .overlay(RoundedRectangle(cornerRadius: 16)
+            .stroke(hasError ? Color.red : Color.gray, lineWidth: hasError ? 2 : 1 ))
+        .background(RoundedRectangle(cornerRadius: 15).fill(hasError ? Color.ErrRed : Color.white))
+        
         if hasError{
             ErrorLabel(prompt: prompt)
         }
     }
 }
-
-
 
 struct CustomInput_Previews: PreviewProvider {
     static var previews: some View {
