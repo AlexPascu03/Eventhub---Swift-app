@@ -12,14 +12,10 @@ struct CustomButton: View {
     let action:() -> Void
     let text : String
     
-    
     init(text:String , action: @escaping () -> Void){
         self.action = action
         self.text = text
     }
-    
-    
-
     
     var body: some View {
         Button(action : {
