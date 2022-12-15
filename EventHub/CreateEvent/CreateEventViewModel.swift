@@ -17,10 +17,12 @@ protocol CreateEventViewModelProtocol: ObservableObject {
     var description: String { get set }
     var date: Date { get set }
     var image: UIImage? { get set }
+    var participants: String { get set }
     
     var hasNameError: Bool { get set }
     var hasLocationError: Bool { get set }
     var hasDescriptionError: Bool { get set }
+    var hasParticipantsError: Bool { get set }
     var isPickerShowing: Bool { get set }
     var canSubmit: Bool { get set }
     
@@ -34,7 +36,8 @@ final class CreateEventViewModel: CreateEventViewModelProtocol {
     @Published var description: String = ""
     @Published var date: Date = Date()
     @Published var image: UIImage?
-    
+    @Published var participants: String = ""
+
     var userId = Auth.auth().currentUser?.uid
     
     @State var isPickerShowing = false
@@ -44,6 +47,8 @@ final class CreateEventViewModel: CreateEventViewModelProtocol {
     @Published var hasNameError = false
     @Published var hasLocationError = false
     @Published var hasDescriptionError = false
+    @Published var hasParticipantsError = false
+
     private var cancellableSet: Set<AnyCancellable> = []
     
     let repository: CreateEventRepositoryProtocol
@@ -66,10 +71,11 @@ final class CreateEventViewModel: CreateEventViewModelProtocol {
     }
     
     func addEventToDb(){
-        repository.addEventToDb(userID: userId!, name: name, location: location, description: description, date: date, image: image) { result in
+        repository.addEventToDb(userID: userId!, name: name, location: location, description: description, date: date, image: image, participants: participants) { result in
             switch result {
             case .success:
                 print("succesful")
+                self.goToMainPage()
             case .failure:
                 print("failed")
             }
@@ -77,7 +83,6 @@ final class CreateEventViewModel: CreateEventViewModelProtocol {
     }
     
     func goToMainPage() {
-        print("back")
         navigation.onGoToMainPage?()
     }
 }

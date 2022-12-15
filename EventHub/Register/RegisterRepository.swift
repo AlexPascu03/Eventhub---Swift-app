@@ -9,13 +9,10 @@ import Foundation
 import Firebase
 import FirebaseFirestore
 
-protocol RegisterRepositoryProtocol {
-
-final class RegisterRepository: RegisterRepositoryProtocol {
+final class RegisterRepository {
     
     func createUser(fName: String, password: String, email: String, onResponse: @escaping(Result<Void, Error>) -> Void) -> Void {
         Auth.auth().createUser(withEmail: email, password: password) {result, error in
-            
             if let error = error {
                 onResponse(.failure(error))
             } else {

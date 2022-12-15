@@ -25,14 +25,14 @@ final class AppCoordinator{
     }
     
     func start(){
-        let isLogged = true
+        let isLogged = false
         
         if isLogged{
             mainPageCoordinator = MainPageCoordinator(navController: navController)
             mainPageCoordinator?.start()
         } else {
-            createEventCoordinator = CreateEventCoordinator(navController: navController)
-            createEventCoordinator?.start()
+            signInCoordinator = SignInCoordinator(navController: navController)
+            signInCoordinator?.start()
         }
     }
 }

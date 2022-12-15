@@ -12,59 +12,68 @@ struct EventCardMid: View {
     
     var cover: String = ""
     var title: String = ""
-    var date: String = ""
-    var time: String = ""
+    var date: Date = Date()
     var location: String = ""
+    var participants: Int = 0
     
-    init(cover: String, title: String, date: String, time: String, location: String) {
+    init(cover: String, title: String, date: Date, location: String, participants: Int) {
         self.cover = cover
         self.title = title
         self.date = date
-        self.time = time
         self.location = location
+        self.participants = participants
     }
     
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 20)
-                .frame(width:306, height:306)
+                .frame(width:306, height:282)
                 .foregroundColor(.white)
-            VStack(alignment: .leading){
-                Image(cover)
-                    .resizable()
-                    .frame(width:300, height: 160)
-                    .cornerRadius(20)
-                    .padding(.bottom, 25)
+            VStack{
+                AsyncImage(url: URL(string: cover)) { image in
+                    image.resizable(resizingMode: .stretch)
+                } placeholder: {
+                    Color.black
+                }
+                .scaledToFill()
+                .frame(width:300, height: 160)
+                .cornerRadius(20)
                 VStack(alignment: .leading){
                     Text(title)
                         .font(.system(size:16))
                         .fontWeight(.bold)
-                        .padding(.bottom, 4)
                     HStack{
-                        Text(date)
-                            .foregroundColor(Color.EHPurple)
+                        Text(DateFormatter.dayAndMonth.string(from: date).uppercased())
+                            .foregroundColor(Color.ehPurple)
                             .font(.system(size:14))
                         Circle()
                             .frame(width: 4)
-                            .foregroundColor(.EHPurple)
-                        Text(time)
-                            .foregroundColor(Color.EHPurple)
+                            .foregroundColor(.ehPurple)
+                        
+                        Text(DateFormatter.hourAndMinutes.string(from: date).uppercased())
+                            .foregroundColor(Color.ehPurple)
                             .font(.system(size:14))
                         Circle()
                             .frame(width: 4)
-                            .foregroundColor(.EHPurple)
+                            .foregroundColor(.ehPurple)
                         Text(location)
-                            .foregroundColor(Color.EHPurple)
+                            .foregroundColor(Color.ehPurple)
                             .font(.system(size:14))
                     }
-                    Text("bubbles 2.5k participanti")
-                        .font(.system(size:13))
-                        .foregroundColor(Color.gray)
-                        .padding(.bottom, 12)
-                    
-                    
+                    HStack {
+                        Image("Frame 78")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 64, height: 24)
+                            .padding(.leading, 10)
+                        
+                        Text(String(participants) + " participanti")
+                            .font(.system(size:13))
+                            .padding(.leading, 10)
+                    }
                 }.frame(width: .infinity)
                     .padding(.leading, 5)
+                    .padding(.trailing, 55)
             }
         }
     }
@@ -75,7 +84,7 @@ struct EventCardMid_Previews: PreviewProvider{
         ZStack{
             Color.gray
                 .edgesIgnoringSafeArea(.all)
-            EventCardMid(cover:"depeche", title:"Depeche Modee in Bucuresti -\nMemento Mori Tour", date:"26 OCT",time:"17:00", location: "Arena Nationala")
+            EventCardMid(cover:"depeche", title:"Depeche Modee in Bucuresti -\nMemento Mori Tour", date:Date(), location: "Arena Nationala", participants: 23)
         }
     }
 }

@@ -22,16 +22,16 @@ struct SearchBar: View {
                 ZStack(alignment: .leading){
                     if value.isEmpty{
                         Text(placeholder)
-                            .foregroundColor(Color.DashTextPr)
+                            .foregroundColor(Color.dashTextPr)
                     }
                     TextField("", text: $value)
                 }
             }
             .frame(width: 308, height: 40)
-            .background(Capsule().fill(Color.DashColor1))
+            .background(Capsule().fill(Color.dashColor1))
             Image("filter")
                 .frame(width: 40, height: 40)
-                .background(Capsule().fill(Color.DashColor1))
+                .background(Capsule().fill(Color.dashColor1))
         }.frame(width: 360, height: 40)
     }
 }

@@ -11,18 +11,18 @@ import FirebaseStorage
 import SwiftUI
 
 protocol CreateEventRepositoryProtocol {
-    func addEventToDb(userID: String, name: String, location: String, description: String, date: Date, image: UIImage?, onResponse: @escaping(Result<Void, Error>) -> Void) -> Void
+    func addEventToDb(userID: String, name: String, location: String, description: String, date: Date, image: UIImage?, participants: String, onResponse: @escaping(Result<Void, Error>) -> Void) -> Void
 }
 
 final class CreateEventRepository: CreateEventRepositoryProtocol {
-    func addEventToDb(userID: String, name: String, location: String, description: String, date: Date, image: UIImage?, onResponse: @escaping(Result<Void, Error>) -> Void) -> Void {
+    func addEventToDb(userID: String, name: String, location: String, description: String, date: Date, image: UIImage?, participants: String, onResponse: @escaping(Result<Void, Error>) -> Void) -> Void {
         self.addToStorage(image: image ?? UIImage()) { result in
             switch result {
             case .success(let url):
                 let db = Firestore.firestore()
                 let ref = db.collection("events").document()
                 let userId = Auth.auth().currentUser!.uid
-                ref.setData(["userId": userId ,"name": name, "location": location, "description": description, "date": date, "imageURL": url.absoluteString]) {error in
+                ref.setData(["userId": userId ,"name": name, "location": location, "description": description, "date": date, "participants": Int(participants) ?? 0, "imageURL": url.absoluteString]) {error in
                     if let error = error {
                         onResponse(.failure(error))
                     }else {

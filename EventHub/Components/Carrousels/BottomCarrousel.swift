@@ -9,12 +9,26 @@ import SwiftUI
 import Foundation
 
 struct BottomCarrousel: View {
+    
+    let cards: [EventModel]
+    let goToDetails: (String) -> Void
+    
+    init(cards: [EventModel], goToDetails: @escaping (String) -> Void) {
+        self.cards = cards
+        self.goToDetails = goToDetails
+    }
+    
     var body: some View {
         VStack(alignment:.leading){
-            Text("Eveniment recomandat")
+            Text("Eveniment recomandat 🌟")
                 .padding(.leading, 10)
             HStack{
-                EventCardBig(cover:"gastro", title:"Curs de gastronomie: Cooking Around the World", date:"26 OCT",time:"17:00", location: "Arena Nationala")
+                ForEach(cards) { card in
+                    EventCardBig(cover: card.imageURL, title: card.name, date: card.date, location: card.location, participants: card.participants)
+                        .onTapGesture {
+                            goToDetails(card.id ?? "")
+                        }
+                }
             }
         }
     }
@@ -26,7 +40,7 @@ struct BottomCarrousel_Previews: PreviewProvider{
         ZStack{
             Color.gray
                 .edgesIgnoringSafeArea(.all)
-            BottomCarrousel()
+           // BottomCarrousel()
         }
     }
 }

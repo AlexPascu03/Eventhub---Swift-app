@@ -12,12 +12,11 @@ import Firebase
 final class CreateEventCoordinator {
     let navController: UINavigationController
     var mainPageCoordinator: MainPageCoordinator?
-    
     init(navController: UINavigationController) {
         self.navController = navController
     }
     
-    func start() {
+    func start(){
         let repository = CreateEventRepository()
         var navigation = CreateEventNavigation()
         navigation.onGoToMainPage = { [weak self] in

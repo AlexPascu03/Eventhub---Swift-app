@@ -17,7 +17,7 @@ struct FilterButtons: View {
             }
             .padding(.horizontal, 20)
             .padding(.vertical, 12)
-            .background(Capsule().fill(Color.DashGreen))
+            .background(Capsule().fill(Color.dashGreen))
             .foregroundColor(.white)
             .font(.system(size: 13))
             Spacer(minLength: 1)
@@ -26,7 +26,7 @@ struct FilterButtons: View {
             }
             .padding(.horizontal, 20)
             .padding(.vertical, 12)
-            .background(Capsule().fill(Color.DashOrange))
+            .background(Capsule().fill(Color.dashOrange))
             .foregroundColor(.white)
             .font(.system(size: 13))
             Spacer(minLength: 1)
@@ -35,7 +35,7 @@ struct FilterButtons: View {
             }
             .padding(.horizontal, 20)
             .padding(.vertical, 12)
-            .background(Capsule().fill(Color.DashRed))
+            .background(Capsule().fill(Color.dashRed))
             .foregroundColor(.white)
             .font(.system(size: 13))
         }

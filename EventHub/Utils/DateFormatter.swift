@@ -23,4 +23,18 @@ extension Formatter {
         return formatter
     }()
     
+    static let hourAndMinutes: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm"
+        formatter.locale = Locale(identifier: "ro")
+        return formatter
+    }()
+    
+    static let weekdayWithMonthDateAndYear: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEEE, MMMM d yyyy"
+        formatter.locale = Locale(identifier: "ro")
+        return formatter
+    }()
+    
 }

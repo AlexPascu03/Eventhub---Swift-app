@@ -62,9 +62,9 @@ struct CustomTextEditor: View {
                 .frame(width:20 ,height: 16 )
             
         }.overlay(RoundedRectangle(cornerRadius: 16)
-            .stroke(isFocused ? Color.EHPurple : Color.gray, lineWidth: isFocused ? 2 : 1 ))
+            .stroke(isFocused ? Color.ehPurple : Color.gray, lineWidth: isFocused ? 2 : 1 ))
         .autocorrectionDisabled()
-        .background(RoundedRectangle(cornerRadius: 15).fill(hasError ? Color.ErrRed : Color.white))
+        .background(RoundedRectangle(cornerRadius: 15).fill(hasError ? Color.errRed : Color.white))
         
         if hasError{
             ErrorLabel(prompt: prompt)

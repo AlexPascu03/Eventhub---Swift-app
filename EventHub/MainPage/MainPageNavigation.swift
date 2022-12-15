@@ -9,8 +9,10 @@ import Foundation
 
 protocol MainPageNavigationProtocol {
     var onGoToCreate: (() -> Void)? { get set }
+    var onGoToDetails: ((String) -> Void)? { get set }
 }
 
 struct MainPageNavigation: MainPageNavigationProtocol{
     var onGoToCreate: (() -> Void)?
+    var onGoToDetails: ((String) -> Void)?
 }

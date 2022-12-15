@@ -10,16 +10,14 @@ import UIKit
 
 struct EventCardSmall: View {
     
-    var cover: String = ""
-    var title: String = ""
-    var date: String = ""
-    var time: String = ""
+    var cover: String
+    var title: String
+    var date: Date
     
-    init(cover: String, title: String, date: String, time: String) {
+    init(cover: String, title: String, date: Date) {
         self.cover = cover
         self.title = title
         self.date = date
-        self.time = time
     }
     var body: some View {
         ZStack{
@@ -27,29 +25,33 @@ struct EventCardSmall: View {
                 .frame(width:175, height:189)
                 .foregroundColor(.white)
             VStack{
-                Image(cover)
-                    .cornerRadius(20)
+                AsyncImage(url: URL(string: cover)) { image in
+                    image.resizable(resizingMode: .stretch)
+                } placeholder: {
+                    Color.black
+                }
+                .scaledToFit()
+                .frame(width: 159, height: 109)
+                .cornerRadius(20)
                 VStack(alignment: .leading){
-                    
                     Text(title)
                         .font(.system(size:13))
                         .fontWeight(.bold)
+                        .frame(width: 155, height: 36, alignment: .topLeading)
                         .padding(.bottom, 2)
                     HStack{
-                        Text(date)
-                            .foregroundColor(Color.EHPurple)
+                        Text(DateFormatter.dayAndMonth.string(from: date).uppercased())
+                            .foregroundColor(Color.ehPurple)
                             .font(.system(size:13))
                         Circle()
                             .frame(width: 4)
-                            .foregroundColor(.EHPurple)
-                        
-                        Text(time)
-                            .foregroundColor(Color.EHPurple)
+                            .foregroundColor(.ehPurple)                
+                        Text(DateFormatter.hourAndMinutes.string(from: date).uppercased())
+                            .foregroundColor(Color.ehPurple)
                             .font(.system(size:13))
                     }
                 }
             }
-            
         }
     }
 }
@@ -59,7 +61,7 @@ struct EventCardSmall_Previews: PreviewProvider{
         ZStack{
             Color.gray
                 .edgesIgnoringSafeArea(.all)
-            EventCardSmall(cover:"vango", title:"Vincent Van Gogh: \nO experienta imersiva", date:"26 OCT", time:"17:00")
+            EventCardSmall(cover:"vango", title:"Vincent Van Gogh: \nO experienta imersiva", date:Date() )
         }
     }
 }

@@ -6,9 +6,6 @@
 //
 
 import SwiftUI
-import UIKit
-import Foundation
-import FirebaseStorage
 import PhotosUI
 
 struct ImagePicker: View {
@@ -28,12 +25,12 @@ struct ImagePicker: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 424, height: 160)
-                    .background(Color.AddCoverBkg)
+                    .background(Color.addCoverBkg)
                 
             } else {
                 Text("Coperta eveniment")
                     .frame(width: 424, height: 160)
-                    .background(Color.AddCoverBkg)
+                    .background(Color.addCoverBkg)
             }
             PhotosPicker(
                 selection: $selectedItem,
