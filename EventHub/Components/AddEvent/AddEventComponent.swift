@@ -30,7 +30,7 @@ struct AddEventComponent: View {
             Image("Add")
                 .padding(.horizontal, 20)
         }.frame(width: .infinity , height: .infinity)
-            .background(LinearGradient(colors: [Color.DashColor1, Color.DashColor2], startPoint: .top, endPoint: .bottom))
+            .background(LinearGradient(colors: [Color.dashColor1, Color.dashColor2], startPoint: .top, endPoint: .bottom))
             .cornerRadius(15)
             .shadow(radius: 5)
             .padding(.horizontal, 10)

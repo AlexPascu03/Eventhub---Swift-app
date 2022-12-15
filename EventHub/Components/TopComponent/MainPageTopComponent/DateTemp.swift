@@ -20,9 +20,9 @@ struct DateTemp: View {
     var body: some View{
         HStack{
             Text(Formatter.weekdayWithMonthAndDate.string(from: Date()).uppercased())
-                .foregroundColor(Color.DashTextPr)
+                .foregroundColor(Color.dashTextPr)
             Label("19°C", systemImage: "icloud")
-                .foregroundColor(Color.DashTextPr)
+                .foregroundColor(Color.dashTextPr)
         }.frame(width: .infinity)
             .font(.system(size: 13))
     }

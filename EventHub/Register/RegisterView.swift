@@ -28,8 +28,7 @@ struct RegisterView<ViewModel: RegisterViewModelProtocol>: View {
             
             CustomButton(text: "CREEAZA CONT", action: {
                 viewModel.register()
-            }
-            )
+            })
             .opacity(viewModel.canSubmit ? 1 : 0.6)
             .disabled(!viewModel.canSubmit)
             Text("SAU")
@@ -43,6 +42,13 @@ struct RegisterView<ViewModel: RegisterViewModelProtocol>: View {
             }
             
         }.padding()
+            .alert(viewModel.alertText + "Please change your email or go to sign in", isPresented: $viewModel.hasAlert ) {
+                Button("Cancel", role: .cancel) {
+                }
+                Button("Sign In") {
+                    viewModel.goToSignIn()
+                }
+            }
     }
 }
 

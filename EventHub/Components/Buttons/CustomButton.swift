@@ -26,7 +26,7 @@ struct CustomButton: View {
         }
         .padding()
         .frame(minWidth: 0, maxWidth: 340)
-        .background(Color.EHPurple)
+        .background(Color.ehPurple)
         .cornerRadius(20)
         .foregroundColor(.white)
     }
@@ -38,7 +38,8 @@ struct CustomButton_Previews: PreviewProvider {
             CustomButton(text: "Log in", action: {
                 print("print")
             })
-            CustomButton(text:"Register" ,action: {print("asd")})
+            CustomButton(text:"Register" ,action: {
+                print("asd")})
         }
     }
 }

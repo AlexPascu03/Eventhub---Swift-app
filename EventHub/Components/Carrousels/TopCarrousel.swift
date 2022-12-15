@@ -11,23 +11,28 @@ import UIKit
 
 struct TopCarrousel: View {
     
+    let cards: [EventModel]
+    let goToDetails: (String) -> Void
+    
+    init(cards: [EventModel], goToDetails: @escaping (String) -> Void) {
+        self.cards = cards
+        self.goToDetails = goToDetails
+    }
+    
     var body: some View {
         VStack(alignment:.leading){
             Text("Top 10 evenimente in aceasta saptmana")
-                .padding(.leading, 10)
+                .padding(10)
             ScrollView(.horizontal, showsIndicators: false){
                 HStack{
-                    EventCardSmall(cover:"vango", title:"Vincent Van Gogh: \nO experienta imersiva", date:"26 OCT", time:"17:00" )
-                    EventCardSmall(cover:"vango", title:"Vincent Van Gogh: \nO experienta imersiva", date:"26 OCT", time:"17:00")
-                    EventCardSmall(cover:"vango", title:"Vincent Van Gogh: \nO experienta imersiva", date:"26 OCT", time:"17:00")
+                    ForEach(cards) { card in
+                        EventCardSmall(cover:card.imageURL, title:card.name, date:card.date)
+                            .onTapGesture {
+                                goToDetails(card.id ?? "")
+                            }
+                    }
                 }.padding(.leading, 10)
             }
         }
-    }
-}
-
-struct TopCarrousel_Previews: PreviewProvider{
-    static var previews: some View {
-        TopCarrousel()
     }
 }

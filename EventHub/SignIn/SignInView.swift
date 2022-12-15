@@ -49,6 +49,7 @@ struct SignInView<ViewModel: SignInViewModelProtocol>: View {
             }
         }
         .padding()
+        
     }
 }
 

@@ -15,9 +15,10 @@ struct MainPageView<ViewModel: MainPageViewModelProtocol>: View {
             TopComponent()
             VStack{
                 ScrollView(.vertical, showsIndicators: false){
-                    TopCarrousel()
-                    MidCarrousel()
-                    BottomCarrousel()
+                    TopCarrousel(cards: viewModel.thisWeekEvents, goToDetails: viewModel.goToDetails(_:))
+                    PopularCarrousel(cards: viewModel.popularEvents, goToDetails: viewModel.goToDetails(_:))
+                    CloseCarrousel(cards: viewModel.closeEvents, goToDetails: viewModel.goToDetails(_:))
+                    BottomCarrousel(cards: viewModel.randomEvent, goToDetails: viewModel.goToDetails(_:))
                     Button {
                         viewModel.goToCreate()
                     } label: {
@@ -26,7 +27,7 @@ struct MainPageView<ViewModel: MainPageViewModelProtocol>: View {
                 }
                 .padding(.leading, 3)
             }
-            .background(Color.BackgroundGray)
+            .background(Color.backgroundGray)
         }
         .ignoresSafeArea()
     }

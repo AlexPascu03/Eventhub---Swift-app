@@ -12,6 +12,7 @@ import SwiftUI
 final class MainPageCoordinator {
     let navController: UINavigationController
     var createEventCoordinator: CreateEventCoordinator?
+    var eventDetailsCoordinator: EventDetailsCoordinator?
     
     init(navController: UINavigationController) {
         self.navController = navController
@@ -23,7 +24,9 @@ final class MainPageCoordinator {
         navigation.onGoToCreate = { [weak self] in
             self?.onGoToCreate()
         }
-        
+        navigation.onGoToDetails = { [weak self] id in
+            self?.onGoToDetails(id)
+        }        
         let viewModel = MainPageViewModel(repository: repository, navigation: navigation)
         let view = MainPageView(viewModel: viewModel)
         let viewController = UIHostingController(rootView: view)
@@ -34,5 +37,10 @@ final class MainPageCoordinator {
     func onGoToCreate() {
         createEventCoordinator = CreateEventCoordinator(navController: navController)
         createEventCoordinator?.start()
+    }
+    
+    func onGoToDetails(_ id: String) {
+        eventDetailsCoordinator = EventDetailsCoordinator(navController: navController)
+        eventDetailsCoordinator?.start(id)
     }
 }

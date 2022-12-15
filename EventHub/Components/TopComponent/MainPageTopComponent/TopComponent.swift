@@ -23,7 +23,7 @@ struct TopComponent: View {
                     Spacer()
                     Label("Schimba", image:"papperplane" )
                         .font(.system(size:13))
-                        .foregroundColor(Color.DashTextPr)
+                        .foregroundColor(Color.dashTextPr)
                 }
                 SearchBar(placeholder: "Cauta evenimente", icon: "Search", value: .constant(""))
                     .padding(.bottom, 16)
@@ -34,7 +34,7 @@ struct TopComponent: View {
             .padding(.bottom, 25)
         }
         .frame(width: .infinity , height: .infinity)
-        .background(LinearGradient(colors: [Color.DashColor1, Color.DashColor2], startPoint: .top, endPoint: .bottom))
+        .background(LinearGradient(colors: [Color.dashColor1, Color.dashColor2], startPoint: .top, endPoint: .bottom))
         .cornerRadius(30)
         .shadow(radius: 5)
     }
