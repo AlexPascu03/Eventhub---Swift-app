@@ -13,11 +13,10 @@
 - Firebase
 
 ## Screenshots
-![scr 1](EventHub/Assets.xcassets/Screenshots/sim1.png?raw=true)
 <img src = "EventHub/Assets.xcassets/Screenshots/sim1.png?raw=true" alt="scr1" width= "200px"/>
-![scr 2](.Assets.xcassets/Screenshots/sim2.PNG?raw=true)
-![scr 3](.Assets.xcassets/Screenshots/sim3.PNG?raw=true)
-![scr 4](.Assets.xcassets/Screenshots/sim4.PNG?raw=true)
-![scr 5](.Assets.xcassets/Screenshots/sim5.PNG?raw=true)
-![scr 6](.Assets.xcassets/Screenshots/sim6.PNG?raw=true)
-![scr 7](.Assets.xcassets/Screenshots/sim7.PNG?raw=true)
+<img src = "EventHub/Assets.xcassets/Screenshots/sim1.png?raw=true" alt="scr2" width= "200px"/>
+<img src = "EventHub/Assets.xcassets/Screenshots/sim1.png?raw=true" alt="scr3" width= "200px"/>
+<img src = "EventHub/Assets.xcassets/Screenshots/sim1.png?raw=true" alt="scr4" width= "200px"/>
+<img src = "EventHub/Assets.xcassets/Screenshots/sim1.png?raw=true" alt="scr5" width= "200px"/>
+<img src = "EventHub/Assets.xcassets/Screenshots/sim1.png?raw=true" alt="scr6" width= "200px"/>
+<img src = "EventHub/Assets.xcassets/Screenshots/sim1.png?raw=true" alt="scr7" width= "200px"/>
