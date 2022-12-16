@@ -13,10 +13,10 @@
 - Firebase
 
 ## Screenshots
-![scr 1](.assets.xcassets/Screenshots/sim1.PNG?raw=true)
-![scr 2](.assets.xcassets/Screenshots/sim2.PNG?raw=true)
-![scr 3](.assets.xcassets/Screenshots/sim3.PNG?raw=true)
-![scr 4](.assets.xcassets/Screenshots/sim4.PNG?raw=true)
-![scr 5](.assets.xcassets/Screenshots/sim5.PNG?raw=true)
-![scr 6](.assets.xcassets/Screenshots/sim6.PNG?raw=true)
-![scr 7](.assets.xcassets/Screenshots/sim7.PNG?raw=true)
+![scr 1](.Assets.xcassets/Screenshots/sim1.PNG?raw=true)
+![scr 2](.Assets.xcassets/Screenshots/sim2.PNG?raw=true)
+![scr 3](.Assets.xcassets/Screenshots/sim3.PNG?raw=true)
+![scr 4](.Assets.xcassets/Screenshots/sim4.PNG?raw=true)
+![scr 5](.Assets.xcassets/Screenshots/sim5.PNG?raw=true)
+![scr 6](.Assets.xcassets/Screenshots/sim6.PNG?raw=true)
+![scr 7](.Assets.xcassets/Screenshots/sim7.PNG?raw=true)
