@@ -13,7 +13,7 @@
 - Firebase
 
 ## Screenshots
-![scr 1](.Assets.xcassets/Screenshots/sim1.PNG?raw=true)
+![scr 1](EventHub/Assets.xcassets/Screenshots/sim1.png?raw=true)
 ![scr 2](.Assets.xcassets/Screenshots/sim2.PNG?raw=true)
 ![scr 3](.Assets.xcassets/Screenshots/sim3.PNG?raw=true)
 ![scr 4](.Assets.xcassets/Screenshots/sim4.PNG?raw=true)
